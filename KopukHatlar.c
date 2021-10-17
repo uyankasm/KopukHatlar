@@ -156,9 +156,9 @@ i++;
 r:
 
 for(m=0;m<y;m++){
-	hat_uzunlugu+=sqrt(pow((hat[m].dx2-hat[m].dx1),2)+pow((hat[m].dy2-hat[m].dy1),2));//y hat sayýsý
+	hat_uzunlugu+=sqrt(pow((hat[m].dx2-hat[m].dx1),2)+pow((hat[m].dy2-hat[m].dy1),2));//y hat sayÃ½sÃ½
 }
-for(m=0;m<t;m++){//t musteri sayýsý
+for(m=0;m<t;m++){//t musteri sayÃ½sÃ½
 	if(mus[m].dtip==1){
 		mesken++;
 	}
@@ -174,7 +174,7 @@ printf("<<%d hat %.2f m\n",y,hat_uzunlugu);
 printf("<<%d musteri %d mesken %d ticari %d sanayi\n\n",t,mesken,ticari,sanayi);
 printf("Bilgilerini ogrenmek istediginiz hattin kimlik numarasini giriniz: ");
 scanf("%d",&kn);
-for(m=0;m<y;m++){//y hat sayýsý-id kaçýncý sýrada kontrol edilir
+for(m=0;m<y;m++){//y hat sayÃ½sÃ½-id kaÃ§Ã½ncÃ½ sÃ½rada kontrol edilir
 	if(hat[m].did==kn){
 		l=m;
 		goto h;
@@ -206,10 +206,10 @@ for(m=0;m<z;m++){
 x:
 printf("<<Indirici %d,koordinat bilgileri(%.2f,%.2f,%.2f,%.2f)\n\n",kn,ind[l].dx1,ind[l].dy1,ind[l].dx2,ind[l].dy2);
 
-//KUÞ UÇUÞUNU HESAPLAR
+//KUÃž UÃ‡UÃžUNU HESAPLAR
 fp1=fopen("Musteri_kus_ucusu_mesafe.txt","w");
 fputs("ID\tTIP\tKUS_UCUSU_MESAFE\n",fp1);
-for(m=0;m<t;m++){//t musteri sayýsý
+for(m=0;m<t;m++){//t musteri sayÃ½sÃ½
 	kus_ucusu=sqrt(pow((mus[m].dx1-ind[0].dx1),2)+pow((mus[m].dy1-ind[0].dy1),2));
 	fprintf(fp1,"%.0f\t%.0f\t%.2f\n",mus[m].did,mus[m].dtip,kus_ucusu);
 }
@@ -219,7 +219,7 @@ int flag = 0 ;
 fp3=fopen("Kopuk_Hat.txt","w");
 fprintf(fp3,"KOPUK HATLAR:\n");
 
-	for(s=0;s<y-1;s++){//y hat sayýsý
+	for(s=0;s<y-1;s++){//y hat sayÃ½sÃ½
 		flag=0;
 		for(w=0;w<y;w++){
 			if(hat[s].dx2==hat[w].dx1&&hat[s].dy2==hat[w].dy1){
